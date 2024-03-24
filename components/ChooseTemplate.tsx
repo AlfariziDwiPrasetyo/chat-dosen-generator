@@ -6,7 +6,6 @@ import Bertemu from "./Bertemu";
 
 function ChooseTemplate() {
   const [selectedTemplate, setSelectedTemplate] = useState<string>("bertanya");
-  const [border, setBorder] = useState<string>("bertanya");
 
   const renderTemplate = () => {
     switch (selectedTemplate) {
