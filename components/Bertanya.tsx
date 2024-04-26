@@ -38,27 +38,27 @@ function Bertanya() {
     <section className="w-full">
       <div className="mt-10 grid grid-cols-1 md:gap-3 md:grid-cols-3 md:mb-40">
         <div className="poppins md:col-span-2 md:pl-40 pl-5 px-5">
-          <label className="form-control w-full max-w-xs">
+          <label className="form-control w-full">
             <div className="label">
               <span className="label-text">Nama</span>
             </div>
             <input
               type="text"
               placeholder="Contoh : Alfarizi"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full md:max-w-xs"
               value={nama}
               onChange={handleNamaChange}
             />
           </label>
 
-          <label className="form-control w-full max-w-xs">
+          <label className="form-control w-full">
             <div className="label">
               <span className="label-text">Kelas</span>
             </div>
             <input
               type="text"
               placeholder="Contoh : TI22A Semester 4"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full md:max-w-xs"
               value={kelas}
               onChange={handleKelasChange}
             />
@@ -69,7 +69,7 @@ function Bertanya() {
               <span className="label-text">Waktu</span>
             </div>
             <select
-              className="select select-bordered w-full max-w-xs"
+              className="select select-bordered w-full md:max-w-xs"
               value={waktu}
               onChange={handleWaktuChange}
             >
@@ -84,7 +84,7 @@ function Bertanya() {
               <span className="label-text">Pak / Bu</span>
             </div>
             <select
-              className="select select-bordered w-full max-w-xs"
+              className="select select-bordered w-full md:max-w-xs"
               value={gender}
               onChange={handleGenderChange}
             >
@@ -105,11 +105,11 @@ function Bertanya() {
             ></textarea>
           </label>
         </div>
-        <div className="mockup-phone">
+        <div className="mockup-phone mt-10 md:mt-0 lg:mt-0">
           <div className="camera"></div>
           <div className="display">
             <div
-              className="flex w-full h-full mt-10 artboard artboard-demo phone-1 justify-center rounded"
+              className="flex w-full h-full artboard artboard-demo phone-1 justify-center rounded"
               style={{
                 backgroundImage:
                   "url(https://www.wallpapertip.com/wmimgs/1-13180_wallpaper-background-whatsapp-default-dark-green-download-wallpaper.jpg)",

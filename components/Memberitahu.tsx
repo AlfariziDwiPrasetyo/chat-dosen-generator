@@ -45,7 +45,7 @@ function Memberitahu() {
             <input
               type="text"
               placeholder="Contoh : Alfarizi"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full md:max-w-xs"
               value={nama}
               onChange={handleNamaChange}
             />
@@ -58,7 +58,7 @@ function Memberitahu() {
             <input
               type="text"
               placeholder="Contoh : TI22A Semester 4"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full md:max-w-xs"
               value={kelas}
               onChange={handleKelasChange}
             />
@@ -69,7 +69,7 @@ function Memberitahu() {
               <span className="label-text">Waktu</span>
             </div>
             <select
-              className="select select-bordered w-full max-w-xs"
+              className="select select-bordered w-full md:max-w-xs"
               value={waktu}
               onChange={handleWaktuChange}
             >
@@ -84,7 +84,7 @@ function Memberitahu() {
               <span className="label-text">Pak / Bu</span>
             </div>
             <select
-              className="select select-bordered w-full max-w-xs"
+              className="select select-bordered w-full md:max-w-xs"
               value={gender}
               onChange={handleGenderChange}
             >
@@ -106,11 +106,11 @@ function Memberitahu() {
           </label>
         </div>
 
-        <div className="mockup-phone">
+        <div className="mockup-phone mt-10 md:mt-0 lg:mt-0">
           <div className="camera"></div>
           <div className="display">
             <div
-              className="flex w-full h-full mt-10 artboard artboard-demo phone-1 justify-center rounded"
+              className="flex w-full h-full artboard artboard-demo phone-1 justify-center rounded"
               style={{
                 backgroundImage:
                   "url(https://www.wallpapertip.com/wmimgs/1-13180_wallpaper-background-whatsapp-default-dark-green-download-wallpaper.jpg)",
