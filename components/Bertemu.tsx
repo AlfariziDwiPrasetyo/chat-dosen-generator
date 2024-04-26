@@ -1,13 +1,141 @@
-import React from "react";
-import { GoAlertFill } from "react-icons/go";
+"use client";
+import React, { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
-const Bertemu = () => {
+function Memberitahu() {
+  const [nama, setNama] = useState<string>("");
+  const [kelas, setKelas] = useState<string>("");
+  const [waktu, setWaktu] = useState<string>("Pagi");
+  const [gender, setGender] = useState<string>("Pak");
+  const [keperluan, setKeperluan] = useState<string>("");
+  const [copied, setCopied] = useState<boolean>(false);
+
+  const handleNamaChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNama(event.target.value);
+  };
+
+  const handleKelasChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setKelas(event.target.value);
+  };
+
+  const handleWaktuChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setWaktu(event.target.value);
+  };
+
+  const handleGenderChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setGender(event.target.value);
+  };
+
+  const handleKeperluanChange = (
+    event: React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setKeperluan(event.target.value);
+  };
+
+  const chat = `Assalamu'alaikum wr. wb. Selamat ${waktu}, ${gender}. Mohon maaf mengganggu waktunya, saya ${nama} dari kelas ${kelas}, Mohon izin sebelumnya ${gender}, saya bermaksud menghubungi di karenakan ${keperluan}. Maaf ${gender} sekiranya bapak berkenan dapat ditemui kapan pak? Terima kasih banyak sebelumnya ${gender}. Wassalamu'alaikum wr. wb.`;
+
   return (
-    <div className="flex justify-center items-center m-48">
-      <GoAlertFill className="w-20" size={50} />
-      <h1 className="text-3xl primary">UNDER DEVELOPMENT</h1>
-    </div>
-  );
-};
+    <section className="w-full">
+      <div className="mt-10 grid grid-cols-1 md:gap-3 md:grid-cols-3 md:mb-40">
+        <div className="poppins md:col-span-2 md:pl-40 pl-5 px-5">
+          <label className="form-control w-full max-w-xs">
+            <div className="label">
+              <span className="label-text">Nama</span>
+            </div>
+            <input
+              type="text"
+              placeholder="Contoh : Alfarizi"
+              className="input input-bordered w-full max-w-xs"
+              value={nama}
+              onChange={handleNamaChange}
+            />
+          </label>
 
-export default Bertemu;
+          <label className="form-control w-full max-w-xs">
+            <div className="label">
+              <span className="label-text">Kelas</span>
+            </div>
+            <input
+              type="text"
+              placeholder="Contoh : TI22A Semester 4"
+              className="input input-bordered w-full max-w-xs"
+              value={kelas}
+              onChange={handleKelasChange}
+            />
+          </label>
+
+          <label>
+            <div className="label">
+              <span className="label-text">Waktu</span>
+            </div>
+            <select
+              className="select select-bordered w-full max-w-xs"
+              value={waktu}
+              onChange={handleWaktuChange}
+            >
+              <option>Pagi</option>
+              <option>Siang</option>
+              <option>Malam</option>
+            </select>
+          </label>
+
+          <label>
+            <div className="label">
+              <span className="label-text">Pak / Bu</span>
+            </div>
+            <select
+              className="select select-bordered w-full max-w-xs"
+              value={gender}
+              onChange={handleGenderChange}
+            >
+              <option>Pak</option>
+              <option>Bu</option>
+            </select>
+          </label>
+
+          <label className="form-control w-full">
+            <div className="label">
+              <span className="label-text">Keperluan</span>
+            </div>
+            <textarea
+              className="textarea textarea-bordered h-24"
+              placeholder="Contoh : Membutuhkan tanda tangan bapak/ibu "
+              value={keperluan}
+              onChange={handleKeperluanChange}
+            ></textarea>
+          </label>
+        </div>
+
+        <div className="mockup-phone">
+          <div className="camera"></div>
+          <div className="display">
+            <div
+              className="flex w-full h-full mt-10 artboard artboard-demo phone-1 justify-center rounded"
+              style={{
+                backgroundImage:
+                  "url(https://www.wallpapertip.com/wmimgs/1-13180_wallpaper-background-whatsapp-default-dark-green-download-wallpaper.jpg)",
+              }}
+            >
+              <div className="chat chat-start p-5">
+                <div className="chat-bubble">{chat}</div>
+              </div>
+
+              <CopyToClipboard
+                text={chat}
+                onCopy={() => {
+                  setCopied(true);
+                }}
+              >
+                <button className="btn btn-ghost text-white">
+                  {copied ? "Copied" : "Copy"}
+                </button>
+              </CopyToClipboard>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default Memberitahu;

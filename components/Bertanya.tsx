@@ -105,27 +105,32 @@ function Bertanya() {
             ></textarea>
           </label>
         </div>
-        <div
-          className="flex w-full mt-10 justify-center rounded"
-          style={{
-            backgroundImage:
-              "url(https://www.wallpapertip.com/wmimgs/1-13180_wallpaper-background-whatsapp-default-dark-green-download-wallpaper.jpg)",
-          }}
-        >
-          <div className="chat chat-start p-5">
-            <div className="chat-bubble">{chat}</div>
-          </div>
+        <div className="mockup-phone">
+          <div className="camera"></div>
+          <div className="display">
+            <div
+              className="flex w-full h-full mt-10 artboard artboard-demo phone-1 justify-center rounded"
+              style={{
+                backgroundImage:
+                  "url(https://www.wallpapertip.com/wmimgs/1-13180_wallpaper-background-whatsapp-default-dark-green-download-wallpaper.jpg)",
+              }}
+            >
+              <div className="chat chat-start p-5">
+                <div className="chat-bubble">{chat}</div>
+              </div>
 
-          <CopyToClipboard
-            text={chat}
-            onCopy={() => {
-              setCopied(true);
-            }}
-          >
-            <button className="btn btn-ghost text-white">
-              {copied ? "Copied" : "Copy"}
-            </button>
-          </CopyToClipboard>
+              <CopyToClipboard
+                text={chat}
+                onCopy={() => {
+                  setCopied(true);
+                }}
+              >
+                <button className="btn btn-ghost text-white">
+                  {copied ? "Copied" : "Copy"}
+                </button>
+              </CopyToClipboard>
+            </div>
+          </div>
         </div>
       </div>
     </section>
