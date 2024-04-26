@@ -18,7 +18,7 @@ const inter_init = Inter({
 
 export const metadata: Metadata = {
   title: "Chat Dosen Generator",
-  description: "",
+  description: "Web untuk generate chat yang sopan kepada dosen",
 };
 
 export default function RootLayout({

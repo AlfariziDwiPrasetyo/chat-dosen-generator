@@ -38,7 +38,7 @@ function Memberitahu() {
     <section className="w-full">
       <div className="mt-10 grid grid-cols-1 md:gap-3 md:grid-cols-3 md:mb-40">
         <div className="poppins md:col-span-2 md:pl-40 pl-5 px-5">
-          <label className="form-control w-full max-w-xs">
+          <label className="form-control w-full md:max-w-xs">
             <div className="label">
               <span className="label-text">Nama</span>
             </div>
