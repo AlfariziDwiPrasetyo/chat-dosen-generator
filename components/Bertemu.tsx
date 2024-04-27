@@ -35,7 +35,7 @@ function Memberitahu() {
   const chat = `Assalamu'alaikum wr. wb. Selamat ${waktu}, ${gender}. Mohon maaf mengganggu waktunya, saya ${nama} dari kelas ${kelas}, Mohon izin sebelumnya ${gender}, saya bermaksud menghubungi di karenakan ${keperluan}. Maaf ${gender} sekiranya bapak berkenan dapat ditemui kapan pak? Terima kasih banyak sebelumnya ${gender}. Wassalamu'alaikum wr. wb.`;
 
   return (
-    <section className="w-full">
+    <section className="w-full slide-in">
       <div className="mt-10 grid grid-cols-1 md:gap-3 md:grid-cols-3 md:mb-40">
         <div className="poppins md:col-span-2 md:pl-40 pl-5 px-5">
           <label className="form-control w-full md:max-w-xs">

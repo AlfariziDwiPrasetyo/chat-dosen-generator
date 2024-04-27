@@ -15,3 +15,17 @@
 .inter{
   font-family: var(--font-inter);
 }
+
+.slide-in {
+  position: relative;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
